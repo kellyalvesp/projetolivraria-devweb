@@ -9,6 +9,7 @@
             <h1>
               <a href="index.html"><img src="/images/logo.png" alt="" /></a>
             </h1>
+            <div class="linha-vertical"></div>
             <h2>
               <a href="index.html"><img src="/images/aprleitura.png" alt="" /></a>
             </h2>
@@ -32,21 +33,30 @@
           </ul>
         </div>
       </nav>
+      <hr />
     </header>
-    <main></main>
+    <main>
+      <div class="pt1">
+        <div class="lado-esquerdo">
+          <button id="autor">Autor de Abril</button>
+          <h3>Eric-Emanuel Schmitt</h3>
+          <p>
+            Eric-Emmanuel Schmitt has been awarded more than 20 literary prizes and distinctions,
+            and in 2001 he received the title of Chevalier des Arts et des Lettres. His books have
+            been translated into over 40 languages.
+          </p>
+          <button id="acessa-pagina">Acessar página do livro</button>
+        </div>
+        <div class="img">
+          <a href="#"><img src="/public/images/image.png" alt="" /></a>
+        </div>
+      </div>
+    </main>
   </body>
 </template>
 
 <style scoped>
-/*=============================
-            GERAL
-==============================*/
 
-html {
-  font-family:
-    'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: calc(12px + 0.390625vw);
-}
 a {
   text-decoration: none;
 }
@@ -66,6 +76,15 @@ nav {
 
 .logo {
   display: flex;
+  padding: 0;
+  margin: 0 10px 0;
+  align-items: center;
+  gap: 10px;
+  color: #27ae60;
+}
+.linha-vertical {
+  height: 40px;
+  border-left: 2px solid;
 }
 .abas {
   display: flex;
@@ -88,6 +107,25 @@ nav {
   gap: 20px;
 }
 .icones li span {
-  color: #27AE60;
+  color: #27ae60;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #27ae60;
+}
+.pt1 {
+  display: flex;
+  margin: 5rem;
+}
+.pt1 button#autor {
+  background-color: white;
+  color: #27ae60;
+  padding: 10px;
+  border-color: #27AE60;
+  border-radius: 3px;
+}
+.pt1 h3 {
+  font-weight: bold;
+  font-size: 40px;
 }
 </style>

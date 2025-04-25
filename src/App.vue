@@ -65,76 +65,104 @@
       <hr />
       <div class="lancamentos">
         <h3>Lançamentos</h3>
-        <ul>
-          <div class="cima">
-            <li>
-              <a href="#"><img src="/public/images/9781982185824 2.png" alt="" /></a>
-              <h4>Chain of Iron: Volume 2</h4>
-              <p>Cassandra Clare</p>
-              <p>R$23.24</p>
-              <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
-            </li>
-            <li>
-              <a href="#"><img src="/public/images/9781982185824 2(1).png" alt="" /></a>
-              <h4>Chain of Thorns</h4>
-              <p>Cassandra Clare</p>
-              <p>R$23.24</p>
-              <span class="fa-regular fa-heart"></span>
-              <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
-            </li>
-            <li>
-              <a href="#"><img src="/public/images/9781982185824 2(2).png" alt="" /></a>
-              <h4>City of Fallen Angels</h4>
-              <p>Cassandra Clare</p>
-              <p>R$13.94</p>
-              <span class="fa-regular fa-heart"></span>
-              <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
-            </li>
-            <li>
-              <a href="#"><img src="/public/images/9781982185824 2(3).png" alt="" /></a>
-              <h4>Nona the Ninth</h4>
-              <p>Cassandra Clare</p>
-              <p>R$16.84</p>
-              <span class="fa-regular fa-heart"></span>
-              <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
-            </li>
-          </div>
-          <div class="baixo">
-            <li>
-              <a href="#"><img src="/public/images/9781982185824 2(4).png" alt="" /></a>
-              <h4>Harlem Shuffle</h4>
-              <p>Colson Whitehead</p>
-              <p>R$26.92</p>
-              <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
-            </li>
-            <li>
-              <a href="#"><img src="/public/images/9781982185824 2(5).png" alt="" /></a>
-              <h4>Two Old Women</h4>
-              <p>Velma Wallis</p>
-              <p>R$13.95</p>
-              <span class="fa-regular fa-heart"></span>
-              <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
-            </li>
-            <li>
-              <a href="#"><img src="/public/images/9781982185824 2(6).png" alt="" /></a>
-              <h4>Carrie Soto Is Back</h4>
-              <p>Taylor Jenkins Reid</p>
-              <p>R$26.04</p>
-              <span class="fa-regular fa-heart"></span>
-              <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
-            </li>
-            <li>
-              <a href="#"><img src="/public/images/9781982185824 2(7).png" alt="" /></a>
-              <h4>Book Lovers</h4>
-              <p>Emily Henry</p>
-              <p>R$15.81</p>
-              <span class="fa-regular fa-heart"></span>
-              <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
-            </li>
-          </div>
-        </ul>
+        <div class="livros">
+          <ul>
+            <div class="cima">
+              <li>
+                <a href="#"><img src="/public/images/9781982185824 2.png" alt="" /></a>
+                <h4>Chain of Iron: Volume 2</h4>
+                <p class="autor">Cassandra Clare</p>
+                <p class="preco">R$23.24</p>
+                <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
+              </li>
+              <li>
+                <a href="#"><img src="/public/images/9781982185824 2(1).png" alt="" /></a>
+                <h4>Chain of Thorns</h4>
+                <p class="autor">Cassandra Clare</p>
+                <p class="preco">R$23.24</p>
+                <span class="fa-regular fa-heart"></span>
+                <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
+              </li>
+              <li>
+                <a href="#"><img src="/public/images/9781982185824 2(2).png" alt="" /></a>
+                <h4>City of Fallen Angels</h4>
+                <p class="autor">Cassandra Clare</p>
+                <p class="preco">R$13.94</p>
+                <span class="fa-regular fa-heart"></span>
+                <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
+              </li>
+              <li>
+                <a href="#"><img src="/public/images/9781982185824 2(3).png" alt="" /></a>
+                <h4>Nona the Ninth</h4>
+                <p class="autor">Cassandra Clare</p>
+                <p class="preco">R$16.84</p>
+                <span class="fa-regular fa-heart"></span>
+                <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
+              </li>
+            </div>
+            <div class="baixo">
+              <li>
+                <a href="#"><img src="/public/images/9781982185824 2(4).png" alt="" /></a>
+                <h4>Harlem Shuffle</h4>
+                <p class="autor">Colson Whitehead</p>
+                <p class="preco">R$26.92</p>
+                <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
+              </li>
+              <li>
+                <a href="#"><img src="/public/images/9781982185824 2(5).png" alt="" /></a>
+                <h4>Two Old Women</h4>
+                <p class="autor">Velma Wallis</p>
+                <p class="preco">R$13.95</p>
+                <span class="fa-regular fa-heart"></span>
+                <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
+              </li>
+              <li>
+                <a href="#"><img src="/public/images/9781982185824 2(6).png" alt="" /></a>
+                <h4>Carrie Soto Is Back</h4>
+                <p class="autor">Taylor Jenkins Reid</p>
+                <p class="preco">R$26.04</p>
+                <span class="fa-regular fa-heart"></span>
+                <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
+              </li>
+              <li>
+                <a href="#"><img src="/public/images/9781982185824 2(7).png" alt="" /></a>
+                <h4>Book Lovers</h4>
+                <p class="autor">Emily Henry</p>
+                <p class="preco">R$15.81</p>
+                <span class="fa-regular fa-heart"></span>
+                <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
+              </li>
+            </div>
+          </ul>
+        </div>
       </div>
     </main>
+    <footer>
+      <div class="container">
+        <div class="esquerda">
+          <p>IFbooks</p>
+          <ul class="redes-sociais">
+            <li><span class="fa-brands fa-square-facebook"></span></li>
+            <li><span class="fa-brands fa-square-instagram"></span></li>
+            <li><span class="fa-brands fa-square-twitter"></span></li>
+          </ul>
+        </div>
+        <div class="direita">
+          <p>Contato</p>
+          <ul class="contato">
+            <li><span class="fa-solid fa-phone"></span>+55 47 40045263</li>
+            <li><span class="fa-solid fa-clock"></span>8h às 23h - Seg a Sex</li>
+            <li><span class="fa-solid fa-envelope"></span>contato@ifbooks.com</li>
+          </ul>
+          <a class="pagamentos" href="index.html"
+            ><img src="/public/images/ways to pay.png" alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="direitos">
+        <p>© Alguns direitos reservados. IFbooks 2025.</p>
+      </div>
+    </footer>
   </body>
 </template>
 
@@ -185,7 +213,6 @@ nav {
 .sup-esquerdo {
   display: flex;
 }
-
 .icones {
   display: flex;
   padding: 0;
@@ -273,5 +300,100 @@ button#acessa-pagina {
   align-items: center;
   margin: 2vw 6.7vw 0 6.7vw;
   padding: 3vw 20px 0 20px;
+}
+.livros button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 3%;
+  padding: 15px 100px 15px 100px;
+  font-size: 1rem;
+}
+.livros h4 {
+  font-size: 1.5rem;
+  margin: 20px 0 2px 0;
+}
+.livros p.autor {
+  color: #7b7881;
+}
+.livros p.preco {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 0 0 25px 0;
+}
+footer {
+  background-color: #28a651;
+  margin: 10vw 0 0 0;
+  padding: 40px 60px 10px;
+}
+.esquerda,
+.direita {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.esquerda ul {
+  list-style: none;
+  display: flex;
+}
+.esquerda {
+  color: #ffffff;
+  padding: 0 5vw 5vw 5vw;
+}
+.esquerda p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.direita {
+  padding: 0 5vw 5vw 5vw;
+}
+.direita p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0 0 2px 0;
+}
+.direita ul {
+  color: #ffffffcc;
+  list-style: none;
+}
+.direita span {
+  padding: 0 10px 0 0;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.redes-sociais {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+.redes-sociais li span {
+  font-size: 1.7rem;
+}
+.contato {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contato li span {
+  margin-right: 8px;
+}
+.pagamentos img {
+  margin-top: 10px;
+  height: 30px;
+}
+.direitos {
+  text-align: center;
+  border-top: 2px solid rgba(255, 255, 255, 0.705);
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 </style>

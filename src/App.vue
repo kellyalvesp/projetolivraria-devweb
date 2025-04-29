@@ -1,4 +1,28 @@
-<script setup></script>
+<script setup>
+import { ref, computed } from 'vue'
+
+const mostrarCarrinho = ref(false)
+
+function abrirCarrinho() {
+  mostrarCarrinho.value = true
+}
+
+function voltarParaHome() {
+  mostrarCarrinho.value = false
+}
+
+const contador = ref(1)
+const precoUnitario = 23.24
+const total = computed(() => {
+  return (contador.value * precoUnitario).toFixed(2).replace(".", ",")
+})
+function incrementar() {
+  contador.value++
+}
+function decrementar() {
+  contador.value--
+}
+</script>
 
 <template>
   <body>
@@ -15,7 +39,7 @@
             </h2>
           </div>
           <div class="pesquisa">
-            <input type="" placeholder="Pesquisar" />
+            <input type="text" placeholder="Pesquisar" />
           </div>
         </div>
         <div class="navegacao">
@@ -28,15 +52,17 @@
         </div>
         <div class="icons">
           <ul class="icones">
-            <li><span class="fa-solid fa-cart-shopping"></span></li>
+            <li @click="abrirCarrinho"><span class="fa-solid fa-cart-shopping"></span></li>
+            <div class="linha-vicon"></div>
             <li><span class="fa-solid fa-heart"></span></li>
+            <div class="linha-vicon"></div>
             <li><span class="fa-solid fa-user"></span></li>
           </ul>
         </div>
       </nav>
       <hr />
     </header>
-    <main>
+    <main v-if="!mostrarCarrinho">
       <div class="pt1">
         <div class="lado-esquerdo">
           <button id="autor">Autor de Abril</button>
@@ -79,24 +105,23 @@
                 <a href="#"><img src="/public/images/9781982185824 2(1).png" alt="" /></a>
                 <h4>Chain of Thorns</h4>
                 <p class="autor">Cassandra Clare</p>
-                <p class="preco">R$23.24</p>
-                <span class="fa-regular fa-heart"></span>
+                <p class="preco">R$23.24 <span class="fa-regular fa-heart"></span></p>
+
                 <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
               </li>
               <li>
                 <a href="#"><img src="/public/images/9781982185824 2(2).png" alt="" /></a>
                 <h4>City of Fallen Angels</h4>
                 <p class="autor">Cassandra Clare</p>
-                <p class="preco">R$13.94</p>
-                <span class="fa-regular fa-heart"></span>
+                <p class="preco">R$13.94 <span class="fa-regular fa-heart"></span></p>
+
                 <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
               </li>
               <li>
                 <a href="#"><img src="/public/images/9781982185824 2(3).png" alt="" /></a>
                 <h4>Nona the Ninth</h4>
                 <p class="autor">Cassandra Clare</p>
-                <p class="preco">R$16.84</p>
-                <span class="fa-regular fa-heart"></span>
+                <p class="preco">R$16.84 <span class="fa-regular fa-heart"></span></p>
                 <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
               </li>
             </div>
@@ -112,24 +137,22 @@
                 <a href="#"><img src="/public/images/9781982185824 2(5).png" alt="" /></a>
                 <h4>Two Old Women</h4>
                 <p class="autor">Velma Wallis</p>
-                <p class="preco">R$13.95</p>
-                <span class="fa-regular fa-heart"></span>
+                <p class="preco">R$13.95 <span class="fa-regular fa-heart"></span></p>
                 <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
               </li>
               <li>
                 <a href="#"><img src="/public/images/9781982185824 2(6).png" alt="" /></a>
                 <h4>Carrie Soto Is Back</h4>
                 <p class="autor">Taylor Jenkins Reid</p>
-                <p class="preco">R$26.04</p>
-                <span class="fa-regular fa-heart"></span>
+                <p class="preco">R$26.04 <span class="fa-regular fa-heart"></span></p>
+
                 <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
               </li>
               <li>
                 <a href="#"><img src="/public/images/9781982185824 2(7).png" alt="" /></a>
                 <h4>Book Lovers</h4>
                 <p class="autor">Emily Henry</p>
-                <p class="preco">R$15.81</p>
-                <span class="fa-regular fa-heart"></span>
+                <p class="preco">R$15.81 <span class="fa-regular fa-heart"></span></p>
                 <button><span class="fa-solid fa-cart-shopping"></span>Comprar</button>
               </li>
             </div>
@@ -137,6 +160,52 @@
         </div>
       </div>
     </main>
+    <section class="carrinho" v-else>
+      <h5>Carrinho</h5>
+      <ul class="partes">
+        <li class="titulo-car">Título</li>
+        <li>Quantidade</li>
+        <li class="subtotal">Subtotal</li>
+      </ul>
+      <div class="linha-horizontal"></div>
+      <ul>
+        <li>
+          <div class="imagem">
+          <img src="/public/images/volume2.png" alt="">
+        </div>
+        <div class="info">
+          <h6>Chain of Iron: Volume 2</h6>
+          <p>Cassandra Clare</p>
+          <p>R$23,24</p>
+        </div>
+        <div class="segundasInfos">
+          <button v-on:click="incrementar">+</button>
+          <p>{{ contador }}</p>
+          <button @click="decrementar">-</button>
+          <p>R${{ total }}</p>
+        </div>
+        </li>
+        <hr>
+        <li>
+          <div class="imagem">
+          <img src="/public/images/volume2.png" alt="">
+        </div>
+        <div class="info">
+          <h6>Chain of Iron: Volume 2</h6>
+          <p>Cassandra Clare</p>
+          <p>R$23,24</p>
+        </div>
+        <div class="segundasInfos">
+          <button v-on:click="incrementar">+</button>
+          <p>{{ contador }}</p>
+          <button @click="decrementar">-</button>
+          <p>R${{ total }}</p>
+        </div>
+        </li>
+      </ul>
+      <hr>
+      <button @click="voltarParaHome">Voltar</button>
+    </section>
     <footer>
       <div class="container">
         <div class="esquerda">
@@ -184,6 +253,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10px 50px 10px 50px;
   padding: 10px 20px;
   flex-wrap: wrap;
 }
@@ -218,13 +288,19 @@ nav {
   padding: 0;
   margin: 0;
   gap: 20px;
+  font-size: larger;
 }
 .icones li span {
   color: #27ae60;
 }
+.linha-vicon {
+  color: #27ae60;
+  height: 20px;
+  border-left: 2px solid;
+}
 .pesquisa input {
   padding: 10px 60px 10px 10px;
-  margin: 1vw 2px 0 2px;
+  margin: 0 2px 0 2px;
   background-color: #f1f1f1;
   border: none;
 }
@@ -232,6 +308,11 @@ hr {
   border: 0;
   border-top: 1px solid #27ae60;
 }
+
+/*============================
+        PRIMEIRA PAGINA
+=============================*/
+
 .pt1 {
   display: flex;
   margin: 5vw 10vw 2vw 10vw;
@@ -257,6 +338,9 @@ button#acessa-pagina {
 }
 .pt1 p {
   color: #4d4c4c;
+}
+.pt1 img {
+  margin: 0 60px 0 80px;
 }
 .linha-vertical2 {
   height: 40px;
@@ -320,7 +404,40 @@ button#acessa-pagina {
   font-weight: bold;
   font-size: 1.3rem;
   margin: 0 0 25px 0;
+  justify-content: space-between;
+  display: flex;
 }
+
+/*============================
+          SEGUNDA PAGINA
+=============================*/
+.linha-horizontal {
+  border-top: 2px solid #27ae60;
+}
+.carrinho {
+  margin: 10vw 5vw 3vw 5vw;
+}
+.carrinho h5 {
+  color: #27ae60;
+  font-size: 1.8vw;
+}
+.carrinho ul.partes {
+  list-style: none;
+  display: flex;
+  font-weight: bold;
+  margin: 3vw 0 0 0;
+  font-size: 1.5rem;
+}
+.carrinho li.titulo-car {
+  margin: 0 50vw 0 0;
+}
+.carrinho li.subtotal {
+  margin: 0 0 0 14vw;
+}
+/*============================
+          FOOTER
+=============================*/
+
 footer {
   background-color: #28a651;
   margin: 10vw 0 0 0;
@@ -396,4 +513,10 @@ footer {
   font-size: 0.9rem;
   opacity: 0.8;
 }
+.direitos p {
+  color: #ffffff99;
+}
+
+
+
 </style>

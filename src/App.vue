@@ -14,7 +14,7 @@ function voltarParaHome() {
 const contador = ref(1)
 const precoUnitario = 23.24
 const total = computed(() => {
-  return (contador.value * precoUnitario).toFixed(2).replace(".", ",")
+  return (contador.value * precoUnitario).toFixed(2).replace('.', ',')
 })
 function incrementar() {
   contador.value++
@@ -168,43 +168,72 @@ function decrementar() {
         <li class="subtotal">Subtotal</li>
       </ul>
       <div class="linha-horizontal"></div>
-      <ul>
+      <div class="livro1">
+        <div class="imagem">
+          <img src="/public/images/volume2.png" alt="" />
+        </div>
+        <div class="maior-info">
+          <div class="info">
+            <h6>Chain of Iron: Volume 2</h6>
+            <p class="nome-autor">Cassandra Clare</p>
+            <p class="preco-carrinho">R$23,24</p>
+          </div>
+          <div class="botao-preco">
+            <div class="botao">
+              <button class="contador" v-on:click="incrementar">+</button>
+              <p>{{ contador }}</p>
+              <button @click="decrementar">-</button>
+            </div>
+            <p class="preco-total">R${{ total }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="linhahor-livro"></div>
+      <div class="livro2">
+        <div class="imagem">
+          <img src="/public/images/volume2.png" alt="" />
+        </div>
+        <div class="maior-info">
+          <div class="info">
+            <h6>Chain of Iron: Volume 2</h6>
+            <p class="nome-autor">Cassandra Clare</p>
+            <p class="preco-carrinho">R$23,24</p>
+          </div>
+          <div class="botao-preco">
+            <div class="botao">
+              <button v-on:click="incrementar">+</button>
+              <p>{{ contador }}</p>
+              <button @click="decrementar">-</button>
+            </div>
+            <p class="preco-total">R${{ total }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="linhahor-livro"></div>
+      <button class="voltar" @click="voltarParaHome">Voltar para loja</button>
+      <div class="cupom-maior">
+        <div class="cupom">
+          <input type="text" placeholder="Código de cupom" />
+        </div>
+        <div class="inserir">
+          <button class="insert">Inserir cupom</button>
+        </div>
+      </div>
+      <div class="tabela">
+        <h7>Total da compra</h7>
+        <ul>
+          <p>Produtos:</p>
+          <p>R$175</p>
+        </ul>
         <li>
-          <div class="imagem">
-          <img src="/public/images/volume2.png" alt="">
-        </div>
-        <div class="info">
-          <h6>Chain of Iron: Volume 2</h6>
-          <p>Cassandra Clare</p>
-          <p>R$23,24</p>
-        </div>
-        <div class="segundasInfos">
-          <button v-on:click="incrementar">+</button>
-          <p>{{ contador }}</p>
-          <button @click="decrementar">-</button>
-          <p>R${{ total }}</p>
-        </div>
+          <p>Frete</p>
+          <p>Grátis</p>
         </li>
-        <hr>
         <li>
-          <div class="imagem">
-          <img src="/public/images/volume2.png" alt="">
-        </div>
-        <div class="info">
-          <h6>Chain of Iron: Volume 2</h6>
-          <p>Cassandra Clare</p>
-          <p>R$23,24</p>
-        </div>
-        <div class="segundasInfos">
-          <button v-on:click="incrementar">+</button>
-          <p>{{ contador }}</p>
-          <button @click="decrementar">-</button>
-          <p>R${{ total }}</p>
-        </div>
+          <p>Total:</p>
+          <p>R$175</p>
         </li>
-      </ul>
-      <hr>
-      <button @click="voltarParaHome">Voltar</button>
+      </div>
     </section>
     <footer>
       <div class="container">
@@ -413,6 +442,7 @@ button#acessa-pagina {
 =============================*/
 .linha-horizontal {
   border-top: 2px solid #27ae60;
+  margin: 8px 0 25px 0;
 }
 .carrinho {
   margin: 10vw 5vw 3vw 5vw;
@@ -433,6 +463,92 @@ button#acessa-pagina {
 }
 .carrinho li.subtotal {
   margin: 0 0 0 14vw;
+}
+.livro1 {
+  display: flex;
+}
+.livro2 {
+  display: flex;
+  margin: 2vw 0 2vw 0;
+}
+.botao-preco {
+  display: flex;
+  align-items: center;
+}
+.maior-info {
+  display: flex;
+}
+.info {
+  margin: 0 37.5vw 0 1vw;
+}
+.preco-total {
+  margin: 0 0 0 10vw;
+}
+.linhahor-livro {
+  border-top: 1px solid #bdbdbd;
+  margin: 2vw 0 0 0;
+}
+h6 {
+  font-size: 19px;
+  color: #382c2c;
+  margin: 0 0 0.7vw 0;
+}
+.nome-autor {
+  font-size: 13px;
+  margin: 0 0 0.7vw 0;
+  color: #4f4c57;
+}
+.preco-carrinho {
+  font-weight: bold;
+  font-size: 16.5px;
+}
+.preco-total {
+  font-weight: bold;
+  margin: 0 0 0 16.3vw;
+}
+.botao {
+  border: 1.7px solid black;
+  display: flex;
+  padding: 0.5vw 1.2vw 0.5vw 1.2vw;
+}
+button {
+  background-color: #ffffff;
+  border: #ffffff;
+}
+.voltar {
+  border: 1.7px solid black;
+  padding: 0.8vw 1.5vw 0.8vw 1.5vw;
+  border-radius: 4%;
+  margin: 3vw 0 0 0;
+  font-size: 1rem;
+}
+.imagem {
+  margin: 0 0 0 2vw;
+}
+.cupom input {
+  border: 1.7px solid black;
+  border-radius: 3%;
+  background-color: #ffffff;
+  margin: 3.5vw 0 0 0;
+  font-size: 1rem;
+  padding: 1vw 4vw 1vw 1vw;
+}
+.cupom-maior {
+  display: flex;
+}
+.inserir {
+  margin: 3.5vw 1vw 3.5vw 1vw;
+}
+button.insert {
+  background-color: #27ae60;
+  border: 1.7px solid #28a651;
+  border-radius: 3%;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 1vw 3vw 1vw 3vw;
+}
+.tabela {
+  display: flex;
 }
 /*============================
           FOOTER
@@ -516,7 +632,4 @@ footer {
 .direitos p {
   color: #ffffff99;
 }
-
-
-
 </style>

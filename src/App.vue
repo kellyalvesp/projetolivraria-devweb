@@ -211,28 +211,35 @@ function decrementar() {
       </div>
       <div class="linhahor-livro"></div>
       <button class="voltar" @click="voltarParaHome">Voltar para loja</button>
-      <div class="cupom-maior">
-        <div class="cupom">
-          <input type="text" placeholder="Código de cupom" />
+      <div class="div-maiorct">
+        <div class="cupom-maior">
+          <div class="cupom">
+            <input type="text" placeholder="Código de cupom" />
+          </div>
+          <div class="inserir">
+            <button class="insert">Inserir cupom</button>
+          </div>
         </div>
-        <div class="inserir">
-          <button class="insert">Inserir cupom</button>
+        <div class="tabela">
+          <h2>Total da compra</h2>
+          <ul>
+            <li class="linha">
+              <span>Produtos:</span>
+              <span>R$175</span>
+            </li>
+            <div class="linha-tabela"></div>
+            <li class="linha">
+              <span>Frete:</span>
+              <span>Grátis</span>
+            </li>
+            <div class="linha-tabela"></div>
+            <li class="linha total">
+              <span>Total:</span>
+              <span>R$175</span>
+            </li>
+          </ul>
+          <button class="pagamento">Ir para pagamento</button>
         </div>
-      </div>
-      <div class="tabela">
-        <h7>Total da compra</h7>
-        <ul>
-          <p>Produtos:</p>
-          <p>R$175</p>
-        </ul>
-        <li>
-          <p>Frete</p>
-          <p>Grátis</p>
-        </li>
-        <li>
-          <p>Total:</p>
-          <p>R$175</p>
-        </li>
       </div>
     </section>
     <footer>
@@ -547,9 +554,51 @@ button.insert {
   font-size: 1rem;
   padding: 1vw 3vw 1vw 3vw;
 }
-.tabela {
+.div-maiorct {
   display: flex;
 }
+.tabela {
+  border: 2px solid #000000;
+  border-radius: 4px;
+  margin: 3.5vw 0 0 25vw;
+  width: 470px;
+  height: 355px;
+  top: 1074px;
+  left: 841px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabela ul {
+  width: 80%;
+}
+
+.linha {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+.total {
+  font-weight: bold;
+}
+.linha-tabela {
+  border-top: 1px solid #bdbdbd;
+  margin: 2vw 0 0 0;
+}
+.pagamento {
+  background-color: #27ae60;
+  border: 1.7px solid #28a651;
+  border-radius: 3%;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 1vw 2vw 1vw 2vw;
+  margin: 0 0 1vw 0;
+}
+
 /*============================
           FOOTER
 =============================*/
